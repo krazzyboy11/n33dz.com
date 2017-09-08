@@ -41,12 +41,27 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     
+    
+    <script type="text/javascript" charset="utf-8">
+       document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+function onBackKeyDown() 
+{
+ navigator.app.exitApp();
+}
+}
+    </script>
+
+    
 </head>
 
 <body>
     <div class="app" >
-        <h1>n33dz.com</h1>
         <div id="deviceready" class="blink">
+            <img src="img/Iogo.png">
+            <h1>n33dz.com</h1>
             <p class="event listening">Loading.....</p>
             <p class="event received">Loading ........</p>
         
@@ -75,18 +90,7 @@
     
 
     </script>
-    <script type="text/javascript" charset="utf-8">
-       document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
-function onBackKeyDown() 
-{
- navigator.app.exitApp();
-}
-}
-    </script>
-
+    
     
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
